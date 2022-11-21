@@ -131,7 +131,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'usersapp.CustomUser'
 
-TOKEN_EXPIRE_TIME = datetime.timedelta(seconds=14)
+TOKEN_EXPIRE_TIME = datetime.timedelta(days=14)
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
