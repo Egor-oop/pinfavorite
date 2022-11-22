@@ -19,10 +19,12 @@ from django.urls import path, include
 from rest_framework import routers
 
 from apps.usersapp.views import UserViewSet, RegisterUserAPIView, CustomAuthToken, PersonalAccountViewSet
+from apps.pinsapp.views import PinViewSet
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet, basename='users')
 router.register(r'personal', PersonalAccountViewSet, basename='personal')
+router.register(r'pins', PinViewSet, basename='pins')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
