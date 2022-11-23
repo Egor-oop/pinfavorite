@@ -142,9 +142,13 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Auth config
+
 AUTH_USER_MODEL = 'usersapp.CustomUser'
 
 TOKEN_EXPIRE_TIME = datetime.timedelta(days=14)
+
+# REST_FRAMEWORK settings
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
