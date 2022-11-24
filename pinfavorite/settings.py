@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     # Created apps
     'apps.usersapp',
     'apps.pinsapp',
+    'apps.packsapp',
 ]
 
 MIDDLEWARE = [
