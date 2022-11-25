@@ -31,9 +31,9 @@ class RegisterUserAPIView(generics.CreateAPIView):
 
 
 class UserViewSet(mixins.RetrieveModelMixin,
-                     mixins.UpdateModelMixin,
-                     mixins.ListModelMixin,
-                     viewsets.GenericViewSet):
+                  mixins.UpdateModelMixin,
+                  mixins.ListModelMixin,
+                  viewsets.GenericViewSet):
     queryset = CustomUser.objects.all()
     serializer_class = UserSerializer
     permission_classes = (IsCurrentUserOrReadOnly,)
