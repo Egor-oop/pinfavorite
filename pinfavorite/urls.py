@@ -22,11 +22,13 @@ from rest_framework import routers
 
 from apps.usersapp.views import UserViewSet, RegisterUserAPIView, CustomAuthToken, PersonalAccountViewSet
 from apps.pinsapp.views import PinViewSet
+from apps.packsapp.views import PackViewSet
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet, basename='users')
 router.register(r'personal', PersonalAccountViewSet, basename='personal')
 router.register(r'pins', PinViewSet, basename='pins')
+router.register(r'packs', PackViewSet, basename='packs')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
