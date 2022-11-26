@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'apps.usersapp',
     'apps.pinsapp',
     'apps.packsapp',
+    'apps.followsapp',
 ]
 
 MIDDLEWARE = [
