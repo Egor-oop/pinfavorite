@@ -2,13 +2,17 @@ from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.password_validation import validate_password
 
+from apps.followsapp.serializers import FollowSerializer
+
 from .models import CustomUser
 
 
 class UserSerializer(serializers.ModelSerializer):
+    followers = FollowSerializer(many=True, read_only=True)
+
     class Meta:
         model = CustomUser
-        fields = ('id', 'username', 'email', 'first_name', 'last_name', 'image')
+        fields = ('id', 'username', 'email', 'first_name', 'last_name', 'image', 'followers')
         extra_kwargs = {
             'username': {'required': False}
         }
