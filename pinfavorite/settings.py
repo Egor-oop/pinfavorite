@@ -153,6 +153,8 @@ TOKEN_EXPIRE_TIME = datetime.timedelta(days=14)
 # REST_FRAMEWORK settings
 
 REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 20,
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
         # 'rest_framework.authentication.SessionAuthentication',  # For development
